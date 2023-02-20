@@ -31,8 +31,8 @@ spring:
       on-profile: key-vault
   datasource:
     url: jdbc:postgresql://${POSTGRES-SERVER-NAME}:5432/${CATALOG-DATABASE-NAME}?sslmode=require
-    username: ${POSTGRES-LOGIN-NAME}
-    password: ${POSTGRES-LOGIN-PASSWORD}
+    azure:
+      passwordless-enabled: true
   cloud:
     azure:
       keyvault:
